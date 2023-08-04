@@ -16,7 +16,6 @@ def getBlockData(blockNumber):
     readableDate = transactionTimeStamp.strftime("%Y-%m-%d %H:%M:%S")
     blockData['timestamp'] = readableDate
 
-    # Storing number of transaction details
     numberOfTransactions = len(apiBlockData['transactions'])
     blockData['numberOfTransactions'] = numberOfTransactions
     allTransactions = []

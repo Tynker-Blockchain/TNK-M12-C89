@@ -13,6 +13,10 @@ def getBlockData(blockNumber):
     blockData['size'] = apiBlockData['size']
     blockData['currentHash'] = apiBlockData['hash'].hex()
     blockData['previousHash'] = apiBlockData['parentHash'].hex()
+
+    # Storing number of transaction details
+    numberOfTransactions = len(apiBlockData['transactions'])
+    blockData['numberOfTransactions'] = numberOfTransactions
   
     return blockData
 
